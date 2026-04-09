@@ -67,6 +67,29 @@
       "      xxxxxxxxxxxxxx  ",
       "                      "
     ];
+    var levelTwoPlan = [
+  "xxxxxxxxxxxxxxxxxxxxxx",
+  "x                    x",
+  "x      o      o      x",
+  "x    xxxxx  xxxxx    x",
+  "x @                  x",
+  "x xxxxx        xxxx  x",
+  "x     x!!!!!!!!x     x",
+  "x     xxxxxxxxxx     x",
+  "xxxxxxxxxxxxxxxxxxxxxx"
+];
+
+var levelThreePlan = [
+  "      o o o o o       ",
+  "      xxxxxxxxx       ",
+  "  @             vvv   ",
+  "  xxxx         xxxxx  ",
+  "     x      x         ",
+  "     x      x    o    ",
+  "     x      x   xxx   ",
+  "     xxxxxxxx         ",
+  "     !!!!!!!!         "
+];
 
     /* --- Vector Utility --- */
     function Vector(x, y) {
@@ -408,8 +431,11 @@
       startLevel(0);
     }
 
-    // Start the game with our single level plan
-    runGame([simpleLevelPlan], DOMDisplay);
+    
+var maps = [simpleLevelPlan, levelTwoPlan, levelThreePlan];
+
+
+runGame(maps, DOMDisplay);
   </script>
 </body>
 </html>
