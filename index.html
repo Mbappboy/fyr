@@ -22,6 +22,7 @@
     .player { background: rgb(64, 64, 64); }
     .lost .player { background: rgb(160, 64, 64); }
     .won .player { box-shadow: -4px -7px 8px white, 4px -7px 8px white; }
+    #copyright { font-family: Segoe UI, Arial; color: #292929;}
   </style>
 </head>
 <body>
@@ -54,7 +55,7 @@
       [
         "                      ",
         "      o o o o o       ",
-        "  @   xxxxxxxxx vvv   ",
+        "  @   xxxxxxxxx   !   ",
         "  xxxx         xxxxx  ",
         "     x                ",
         "     x   o  x    o   =",
@@ -293,6 +294,6 @@
     // Launch with the array of maps
     runGame(LEVEL_MAPS, DOMDisplay);
   </script>
-  <footer>&copy; 2026 by Mbappboy and <code>github.com</code>.</footer>
+  <footer id="copyright">&copy; 2026 by Mbappboy and <code>github.com</code>.</footer>
 </body>
 </html>
