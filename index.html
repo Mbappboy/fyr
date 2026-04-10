@@ -75,9 +75,9 @@
         "!!!!!!!!!!!!!!!!!!!!!!"
       ],
       [
-        "            o        =",
-        "        xv            ",
-        "            x          ",
+        "                      ",
+        "        xv  o        =",
+        "            x    v     ",
         "  x      x            ",
         "      x               ",
         "@   ox                ",
@@ -299,19 +299,19 @@
     }
 
     function runGame(plans, Display) {
-      function startLevel(n) {
-        runLevel(new Level(plans[n]), Display, status => {
-          if (status == "lost") {
-            startLevel(n); // Restart current level
-          } else if (n < plans.length - 1) {
-            startLevel(n + 1); // Go to next level
-          } else {
-            alert("Congratulations! You've beaten all levels!");
-          }
-        });
+  function startLevel(n) {
+    runLevel(new Level(plans[n]), Display, status => {
+      if (status == "lost") {
+        startLevel(n);
+      } else if (n < plans.length - 1) { // This must be exactly plans.length - 1
+        startLevel(n + 1);
+      } else {
+        alert("Congratulations! You've beaten all levels!");
       }
-      startLevel(0);
-    }
+    });
+  }
+  startLevel(0);
+}
 
     // Launch with the array of maps
     runGame(LEVEL_MAPS, DOMDisplay);
